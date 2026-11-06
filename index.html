@@ -1,1 +1,45 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="referrer" content="no-referrer"><meta name="color-scheme" content="light dark"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' https://*.trycloudflare.com; base-uri 'none'; form-action 'none'; object-src 'none'"><title>天琴密语 · 固定入口</title><link rel="icon" href="./icon.svg"><link rel="stylesheet" href="./entry.css"><script src="./entry.js" defer></script></head><body><main><div class="brand"><img src="./icon.svg" alt="">天琴密语 <small>LYRA-03</small></div><div class="eyebrow">YOUR PRIVATE CONNECTION</div><h1>只把消息，<br>留给彼此。</h1><p>独立的端到端加密聊天与文件分享。<br>这个固定入口会找到第三套服务器。</p><div id="status" role="status">正在检查安全连接…</div><a id="enter" hidden rel="noreferrer noopener">进入天琴密语 ↗</a><button id="retry" type="button">重新检查</button><details><summary>为什么会进入另一个 HTTPS 地址？</summary><p>加密客户端使用独立的网站来源，与 MARS、VIRGO 的浏览器账号存储隔离。请收藏当前固定入口；服务器通道地址可能变化，账号和服务器密文不会因此改变。新地址首次打开需要重新解锁，并重新核对好友指纹。本机未完成的加密缓存也与原地址绑定。</p></details><footer>服务器不能解密消息正文和文件，仍可见投递对象、IP、时间和大小。<br>不是匿名网络 · 不承诺绝对安全 · 无独立专业审计</footer></main></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' https://*.trycloudflare.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>天琴密语 · 端到端加密聊天</title>
+  <link rel="icon" href="./icon.svg">
+  <link rel="stylesheet" href="./entry.css">
+  <script src="./entry.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="brand"><img src="./icon.svg" alt=""><span>天琴密语 <small>LYRA-03</small></span></header>
+    <section class="welcome" aria-labelledby="welcome-title">
+      <div class="encryption-mark">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.4 3 7.6 7.5 9.5 4.5-1.9 7.5-5.1 7.5-9.5V6L12 3Z"/><path d="m8.5 11.5 2.4 2.4 4.7-4.7"/></svg>
+        <span>端到端加密 · E2EE</span>
+      </div>
+      <h1 id="welcome-title">端到端加密，<br>把对话留给彼此。</h1>
+      <p class="intro">消息、图片和文件，在你的设备上加密，<br class="desktop-break">在朋友的设备上解密。</p>
+      <div class="connection">
+        <div id="status" role="status" aria-live="polite">正在检查安全连接…</div>
+        <div class="entry-actions">
+          <a id="enter" hidden rel="noreferrer noopener">进入天琴密语 ↗</a>
+          <button id="retry" type="button">重新检查</button>
+        </div>
+        <p class="bookmark-note">收藏此页，下次仍从这里进入。</p>
+      </div>
+    </section>
+    <details>
+      <summary>为什么会进入另一个 HTTPS 地址？</summary>
+      <p>加密客户端使用独立的网站来源，与 MARS、VIRGO 的浏览器账号存储隔离。这个固定入口会自动找到当前服务器地址，账号和服务器密文不会因换址改变。</p>
+      <p>新地址首次打开需要重新解锁，并重新核对好友指纹。本机未完成的加密缓存也与原地址绑定。</p>
+    </details>
+    <footer>
+      <strong>服务器保存密文，不持有聊天解密密钥。</strong>
+      <p>仍可见投递对象、IP、时间和大小。请核对好友指纹。</p>
+      <small>依赖可信客户端与设备安全 · 不是匿名网络 · 尚无独立安全审计</small>
+    </footer>
+  </main>
+</body>
+</html>
